@@ -9,7 +9,7 @@ async function Pacientes() {
   const pacientes = await getPacientes();
   return (
     <div>
-      <table>
+      <table className="table-fixed w-full">
         <thead>
           <tr>
             <th>DNI</th>

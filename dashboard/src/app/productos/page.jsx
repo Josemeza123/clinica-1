@@ -10,7 +10,7 @@ async function Productos() {
     const products = await getProducts();
   return (
     <div>
-      <table>
+      <table className="table-fixed w-full">
         <thead>
           <tr>
             <th>Nombre</th>

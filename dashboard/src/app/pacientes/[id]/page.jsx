@@ -12,10 +12,46 @@ async function PacientePage({ params }) {
   const paciente = await getPacientes(params.id);
   return (
     <div>
-      <section className="flex justify-center items-center">
-        <div className="p-6">
-          <h1 className="text-2xl font-bold">{paciente.nombre}</h1>
-          <p className="text-lg">{paciente.dni}</p>
+      <section className=" justify-center items-center">
+        <h1 className="text-2xl font-bold ">{paciente.nombre}</h1>
+        <div className="p-6  columns-4">
+          <div>
+            <label htmlFor="">DNI</label>
+            <p className="text-lg">{paciente.dni}</p>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
           <p className="text-lg">{paciente.nombre}</p>
           <p className="text-lg">{paciente.edad}</p>
           <p className="text-lg">{paciente.estado_civil}</p>
@@ -48,8 +84,8 @@ async function PacientePage({ params }) {
           <p className="text-lg">{paciente.spo2}</p>
           <p className="text-lg">{paciente.evaluacion_fisica}</p>
           <p className="text-lg">{paciente.plan_tratamiento}</p>
-          <Buttons productId={paciente.id} />
         </div>
+        <Buttons productId={paciente.id} />
       </section>
     </div>
   );
