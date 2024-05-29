@@ -1,23 +1,24 @@
 import axios from "axios";
 import TerapeutaList from "./TerapeutaList";
+import Th from "@/components/ui/Th";
 
 async function getTerapeutas() {
-    const { data } = await axios.get("http://localhost:3000/api/terapeutas");
-    return data;
-    }
+  const { data } = await axios.get("http://localhost:3000/api/terapeutas");
+  return data;
+}
 
 async function Terapeutas() {
-    const terapeutas = await getTerapeutas();
+  const terapeutas = await getTerapeutas();
   return (
     <div>
       <table className="table-fixed w-full">
         <thead>
           <tr>
-            <th>DNI</th>
-            <th>NOMBRE</th>
-            <th>ESPECIALIDAD</th>
-            <th>TELEFONO</th>
-            <th>Acciones</th>
+            <Th>DNI</Th>
+            <Th>NOMBRE</Th>
+            <Th>ESPECIALIDAD</Th>
+            <Th>TELEFONO</Th>
+            <Th>Acciones</Th>
           </tr>
         </thead>
         <tbody>

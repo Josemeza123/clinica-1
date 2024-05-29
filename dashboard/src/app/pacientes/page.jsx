@@ -1,5 +1,6 @@
 import axios from "axios";
 import PacienteList from "./PacienteList";
+import Th from "@/components/ui/Th";
 
 async function getPacientes() {
   const { data } = await axios.get("http://localhost:3000/api/pacientes");
@@ -12,12 +13,13 @@ async function Pacientes() {
       <table className="table-fixed w-full">
         <thead>
           <tr>
-            <th>DNI</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Telefono</th>
-            <th>Dolencia</th>
-            <th>Acciones</th>
+            <Th>DNI</Th>
+            <Th>Nombre</Th>
+            <Th>Edad</Th>
+            <Th>Telefono</Th>
+            <Th>Referencia</Th>
+            <Th>Dolencia</Th>
+            <Th>Acciones</Th>
           </tr>
         </thead>
         <tbody>

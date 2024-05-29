@@ -1,15 +1,16 @@
+import Td from "@/components/ui/Td";
 import Link from "next/link";
 
 function ProductList({ product }) {
   return (
     <tr>
-      <td className="bg-gray-300 border-black border-2 align-text-left">{product.name}</td>
-      <td className="bg-gray-300 border-black border-2 align-text-left">{product.price}</td>
-      <td className="bg-gray-300 border-black border-2 align-text-left">{product.descripcion}</td>
-      <td className="bg-gray-300 border-black border-2 align-text-left">{product.stock}</td>
-      <td className="bg-gray-300 border-black border-2 align-text-left">
+      <Td>{product.name}</Td>
+      <Td>{product.price}</Td>
+      <Td>{product.descripcion}</Td>
+      <Td>{product.stock}</Td>
+      <Td>
         <Link href={`/productos/${product.id}`}>ver</Link>
-      </td>
+      </Td>
     </tr>
   );
 }
